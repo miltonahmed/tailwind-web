@@ -17,7 +17,7 @@ const Header = () => {
       <div className="max-w-[1195px] mx-auto px-4 mx-w">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" aria-label='Go To Homepage'>
+          <Link to="/" aria-label="Go To Homepage">
             <Image source={Logo} alt=" Company logo" />
           </Link>
 
@@ -28,7 +28,7 @@ const Header = () => {
                 <li key={item.id}>
                   <NavLink
                     to={item.path}
-                    className="text-white text-base font-bold font-lato tracking-[0.7px] capitalize relative after:absolute after:bottom-[-10px] after:left-0 after:w-full after:h-[2px] navItem after:transition-transform after:duration-300 after:origin-left hover:after:scale-x-100 after:scale-x-0"
+                    className="text-white text-base font-bold font-lato tracking-[0.7px] capitalize relative after:absolute after:bottom-[-10px] after:left-0 after:w-full after:h-[2px]  after:transition-transform after:duration-300 after:origin-left hover:after:scale-x-100 after:scale-x-0 navItem"
                   >
                     {item.name}
                   </NavLink>
@@ -36,7 +36,6 @@ const Header = () => {
               ))}
             </ul>
           </nav>
-          
         </div>
       </div>
     </header>

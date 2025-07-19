@@ -14,3 +14,6 @@
 .navItem::after {
   background: linear-gradient(67deg, #ff357d -3.61%, #ff6f33 86.04%);
 }
+.footer-bg {
+  background: linear-gradient(286deg, #2a2aff -70.7%, #550096 78.49%);
+}

@@ -1,12 +1,15 @@
-import { Outlet } from "react-router"
+import { Outlet } from 'react-router';
+import Footer from './Footer';
+import Header from './Header';
 
 const RootLayout = () => {
   return (
     <div>
-      <header/>
-      <Outlet/>
+      <Header />
+      <Outlet />
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default RootLayout
+export default RootLayout;
