@@ -3,7 +3,7 @@ import Logo from '../../assets/images/logo.png';
 import Image from '../utils/Image';
 
 const menuData = [
-  { id: 1, name: 'home', path: '/' },
+  { id: 1, name: 'home', path: '/home' },
   { id: 2, name: 'about us', path: '/about-us' },
   { id: 3, name: 'services', path: '/services' },
   { id: 4, name: 'pages', path: '/pages' },
