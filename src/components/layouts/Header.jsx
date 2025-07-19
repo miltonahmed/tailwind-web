@@ -14,7 +14,7 @@ const menuData = [
 const Header = () => {
   return (
     <header className="bg-primary pt-6 pb-6">
-      <div className="max-w-[1195px] mx-auto px-4 mx-w">
+      <div className="max-w-(--container) mx-auto px-4 mx-w">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" aria-label="Go To Homepage">
