@@ -1,7 +1,8 @@
 import { FaChevronRight, FaRegEnvelope } from 'react-icons/fa';
 import { FaPhone } from 'react-icons/fa6';
 import { MdLocationOn } from 'react-icons/md';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
+
 import Logo from '../../assets/images/footer-logo.png';
 import Image from '../utils/Image';
 import Paragraph from '../utils/Paragraph';
@@ -13,12 +14,26 @@ const Footer = () => {
     { name: 'Blog', path: '/blog' },
     { name: 'Faq', path: '/faq' },
     { name: 'Contact Us', path: '/contact-us' },
-    
+  ];
+  // Footer title data 
+  const footerTitleData = [
+    {
+      title: 'Crypto PR: The good, the bad and the shoddy',
+      date: 'June 10, 2021',
+    },
+    {
+      title: 'How to build an exemplary crypto exchange…',
+      date: 'June 8, 2021',
+    },
+    {
+      title: 'Ethereum’s Ist Hard Fork, Important Updates…',
+      date: 'June 7, 2021',
+    },
   ];
   return (
     <div className="py-27 footer-bg">
       <div className="max-w-(--container) mx-auto">
-        <div className="flex gap-24">
+        <div className="flex gap-x-[100px] items-center">
           {/* Footer left  */}
           <div className="w-[285px]">
             {/* Footer logo  */}
@@ -67,19 +82,46 @@ const Footer = () => {
             <h4 className="font-montserrat text-2xl text-white tracking-[0.8px] font-bold capitalize pt">
               Company
             </h4>
-            <div className='flex gap-y-4'>
-              <ul className='mt-8'>
+            <div className="flex gap-y-4">
+              <ul className="mt-8">
                 {footerData.map((item, index) => (
                   <li key={index}>
                     <Link className="grid grid-cols-[14px_auto] gap-x-2 mt-3 items-center">
                       <FaChevronRight className="text-secondary mt-2" />
-                      <span className="font-lato font-bold text-base text-white leading-6 tracking-[0.7px]">
+                      <span className="font-lato font-bold text-base text-white leading-6 tracking-[0.7px] capitalize">
                         {item.name}
                       </span>
                     </Link>
                   </li>
                 ))}
               </ul>
+            </div>
+          </div>
+          {/* Footer Right  */}
+          <div className="w-[436px] ">
+            <h4 className="font-montserrat text-2xl text-white tracking-[0.8px] font-bold capitalize leading-[52px]">
+              Recent News
+            </h4>
+            <div className="mt-[22px] grid grid-cols-1 gap-y-[14px]">
+              {footerTitleData.map((item, index) => (
+                <Link
+                  to="/"
+                  key={index}
+                  className="border-b border-white/25 pb-4 block cursor-pointer"
+                >
+                  <h5 className="font-montserrat text-base font-bold text-white leading-6 tracking-[0.533px]">
+                    {item.title}
+                  </h5>
+                  <div className="flex gap-x-2">
+                    <span className="font-lato text-sm font-bold text-[#AEADAD]/75">
+                      Published on:
+                    </span>
+                    <span className="font-lato text-sm font-bold text-[#AEADAD]">
+                      {item.date}
+                    </span>
+                  </div>
+                </Link>
+              ))}
             </div>
           </div>
         </div>
